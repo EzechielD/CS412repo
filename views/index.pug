@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    form(id="myForm" action='/', method='post')
+    form(id="myForm" action='/post', method='post')
         input(type='text', name='id')
         input(type='submit', value='submit')
     if (dsb)
         h1= dsb
         p Welcome to #{dsb}! This is the newest building on the Charles River Campus at Boston University.
-    else
+    else if (cas)
         h1=cas
         h1 This is the post page for #{cas}!
